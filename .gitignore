@@ -1,0 +1,6 @@
+__pycache__/
+.ipynb_checkpoints/
+FCN 16s.ipynb
+FCN 16s (solution).ipynb
+lawin/__pycache__/
+wandb
