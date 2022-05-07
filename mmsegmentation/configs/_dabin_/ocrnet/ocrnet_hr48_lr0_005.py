@@ -45,6 +45,7 @@ model = dict(
     ],
 )
 
+optimizer = dict(type="SGD", lr=0.005, momentum=0.9, weight_decay=0.0005)
 
 log_config = dict(
     interval=150,
@@ -55,7 +56,7 @@ log_config = dict(
             init_kwargs=dict(
                 entity="medic",
                 project="semantic-segmentation",
-                name="DB_ocrnet_cleansing",
+                name="DB_ocrnet_lr0.005",
             ),
         )
         # dict(type='TensorboardLoggerHook')
