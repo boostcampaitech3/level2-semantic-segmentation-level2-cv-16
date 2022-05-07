@@ -12,9 +12,9 @@ import argparse
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Convert MMSegmentation output to csv for AI Stages submission')
-    parser.add_argument('--config_path', default='mmsegmentation/configs/_dabin_/dpt/dpt_vit-b16_512x512_160k_trash.py', help='config file path') # fix
+    parser.add_argument('--config_path', default='mmsegmentation/configs/_dabin_/ocrnet/ocrnet_hr48_512x1024_80k_trash.py', help='config file path') # fix
     parser.add_argument('--root_test_dir', default='../data/test', help='path of test data')
-    parser.add_argument('--work_dir', default='mmsegmentation/work_dirs/dpt_vit', help='directory path which contains pth file') # fix
+    parser.add_argument('--work_dir', default='mmsegmentation/work_dirs/DB_ocrnet_cleansing', help='directory path which contains pth file') # fix
     parser.add_argument('--test_json_path',default='../data/test.json', help='path of test.json')
     parser.add_argument('--epoch', default='latest', help='epoch of inference')
     parser.add_argument('--result_path', default='./submission', help='directory to save csv file in')
