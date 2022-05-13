@@ -22,7 +22,7 @@ from mmseg.utils import collect_env, get_root_logger, setup_multi_processes
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a segmentor')
-    parser.add_argument('config', help='train config file path')
+    parser.add_argument('--config', help='train config file path')
     parser.add_argument('--work-dir', help='the dir to save logs and models')
     parser.add_argument(
         '--load-from', help='the checkpoint file to load weights from')
@@ -50,7 +50,7 @@ def parse_args():
         default=0,
         help='id of gpu to use '
         '(only applicable to non-distributed training)')
-    parser.add_argument('--seed', type=int, default=None, help='random seed')
+    parser.add_argument('--seed', type=int, default=0, help='random seed')
     parser.add_argument(
         '--diff_seed',
         action='store_true',
