@@ -217,6 +217,18 @@ class BeitEncoder(nn.Module):
 
 if __name__ == '__main__':
     # seed 고정
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--datapath', type=str,
+                    help='path of dataset')
+    parser.add_argument('--train_path', type=str,
+                    help='path of train annotation')
+    parser.add_argument('--valid_path', type=str,
+                    help='path of valid annotation')
+    parser.add_argument('--test_path', type=str,
+                    help='path of test annotation')
+    parser.add_argument('--encodername', type=str,
+                    help='backbone of unet decoder')
+    args = parser.parse_args()
     random_seed = 21
     torch.manual_seed(random_seed)
     torch.cuda.manual_seed(random_seed)
@@ -226,10 +238,10 @@ if __name__ == '__main__':
     np.random.seed(random_seed)
     random.seed(random_seed)
     wandb.init(project="semantic-segmentation", entity="medic", name="SY_UNET3+_dsv")
-    data_path = '../input/data'
-    train_path = 'train.json'
-    valid_path = 'val.json'
-    test_path = 'test.json'
+    data_path = args.data_path
+    train_path = args.train_path
+    valid_path = args.val_path
+    test_path = args.test_path
     device = "cuda" if torch.cuda.is_available() else "cpu"
     aux_params=dict(
     pooling='max',             # one of 'avg', 'max'
@@ -238,7 +250,7 @@ if __name__ == '__main__':
     classes=11,                 # define number of output labels
     )
 
-    model = Unet3Plus(encoder_name="tu-convnext_xlarge_in22k",encoder_depth = 4,encoder_weights='imagenet',decoder_channels = 256,
+    model = Unet3Plus(encoder_name=args.encodername ,encoder_depth = 4,encoder_weights='imagenet',decoder_channels = 256,
         cat_channels = 64,decoder_attention_type = 'scse',in_channels=3,classes=11,aux_params=aux_params)
 
     model
