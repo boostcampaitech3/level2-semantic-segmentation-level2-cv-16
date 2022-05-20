@@ -1,3 +1,5 @@
 /json2png_format
 /mmsegmentation/wandb
 /mmsegmentation/configs/_yehyun_
+.ipynb_checkpoints
+__pycache__
