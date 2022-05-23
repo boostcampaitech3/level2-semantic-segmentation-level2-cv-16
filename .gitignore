@@ -1,0 +1,15 @@
+/json2png_format
+/mmsegmentation/wandb
+/mmsegmentation/configs/_yehyun_
+.ipynb_checkpoints
+__pycache__
+/mmsegmentation/configs/_yehyun_
+wandb/
+
+.ipynb_checkpoints/
+.vscode/
+__pycache__/
+new/
+saved/
+special-mission/
+submission/
