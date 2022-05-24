@@ -7,7 +7,7 @@ Project Period
 2022.04.25 ~ 2022.05.12
 - Project Wrap Up Report
     
-    [Semantic Segmentation_CV_팀 리포트(16조).pdf](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ee97fc96-45b3-41db-8ff5-302399f1ff56/Semantic_Segmentation_CV_팀_리포트(16조).pdf)
+    [Semantic Segmentation_CV_팀 리포트(16조).pdf](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ff8eda8b-e3e5-4704-90e8-8055ffadeda6/Semantic_Segmentation_CV_%ED%8C%80_%EB%A6%AC%ED%8F%AC%ED%8A%B8%2816%EC%A1%B0%29.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220524%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220524T005851Z&X-Amz-Expires=86400&X-Amz-Signature=ae25baaa054223fd2267a340f32da336f42ece15bd8bf89415f861bc04e9353f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Semantic%2520Segmentation_CV_%25ED%258C%2580%2520%25EB%25A6%25AC%25ED%258F%25AC%25ED%258A%25B8%2816%25EC%25A1%25B0%29.pdf%22&x-id=GetObject)
     
 
 ## 🔎 재활용 품목 분류를 위한 Segmentation
@@ -184,9 +184,9 @@ cd mmsegmentation
 python tools/train.py <<directory_of_config_file>>
 ```
 
-1. segmentation_modules_pytorch
+2. segmentation_modules_pytorch
 
-```python
+```powershell
 python train_unetthreeplus.py --data_path <<parentdir_path_of_datasets>>\
 --train_path train.json --valid_path val.json --test_path test.json \
 --encodername < ex) tu-efficientnet_b4 >
